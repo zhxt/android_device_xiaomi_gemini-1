@@ -35,5 +35,10 @@ NXP_CHIP_TYPE := 2
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
+ADDITIONAL_BUILD_PROPERTIES  += debug.sf.nobootanimation=1 \
+                               persist.camera.shutter.disable=1 \
+                               camera.disable_zsl_mode=1 \
+                               camera.fifo.disable=1
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/gemini/BoardConfigVendor.mk
